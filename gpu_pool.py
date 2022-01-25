@@ -8,8 +8,8 @@ def run_single_GPU(task, GPU_list):
     p = current_process()._identity[0]
     task_str = 'CUDA_VISIBLE_DEVICES={} {}'.format(GPU_list[p-1], task)
     print('Start task: ' + task_str)
-    time.sleep(1)
-    # os.system(task_str)
+    # time.sleep(1)
+    os.system(task_str)
     print('Finish task: ' + task)
 
 if __name__ == '__main__':
