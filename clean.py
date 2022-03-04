@@ -7,7 +7,7 @@ agsps.add_argument('--new', type=str, default='', help='Output file')
 args = agsps.parse_args()
 
 if args.new == '':
-    new = os.path.dirname(args.old) + 'new_' + os.path.basename(args.old)
+    new = os.path.join(os.path.dirname(args.old), 'new_' + os.path.basename(args.old))
 else:
     new = args.new
 
