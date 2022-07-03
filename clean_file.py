@@ -54,14 +54,14 @@ target_file = []
 for i in Collect_all:
     Flag = 0
     for t in All_file:
-        if re.search(i + '\.', t) != None or i == t:
+        if re.search(i.strip() + '\.', t) != None or i == t:
             # pdb.set_trace()
             # print(i + '\t' + t)
             Flag = 1
             target_file.append(t)
             break
     if Flag == 0:
-        raise ValueError('File' + i + ' not found!')
+        raise ValueError('File ' + i + ' not found!')
 
 print('------------')
 print('Found {} files in folders:'.format(len(target_file)))
