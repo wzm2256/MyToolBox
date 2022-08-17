@@ -24,6 +24,8 @@ def extract(start_line, end_line=None, record=True):
             continue
         if i > end_line:
             continue
+        if line.strip().startswith('#'):
+            continue
         print(line.strip())
         f_record.write(line)
         All_task.append(line.strip())
