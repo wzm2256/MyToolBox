@@ -1,6 +1,6 @@
 # Latex Cleaning Toolbox
 
-This tool is used to clean latex files and copy used files to a new folder (remove annotation lines and move necessary files to the new folder).
+This tool is used to clean latex files (remove annotation lines and multiple empty lines) and copy used files to a new folder.
 
 ## Usage: 
 
