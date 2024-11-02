@@ -7,9 +7,7 @@ argps.add_argument('folder', type=str)
 
 args = argps.parse_args()
 
-
 All = os.listdir(args.folder)
-
 
 for i in All:
     name_seg = i.split('.')
@@ -23,4 +21,4 @@ for i in All:
     print(new_name)
 
     shutil.move(os.path.join(args.folder, i), os.path.join(args.folder, new_name))
-# All_file
+
